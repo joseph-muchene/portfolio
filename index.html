@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joseph Muchene</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <!-- css files -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <!-- dev icons -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+
+    <style>
+      * {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: rgb(34, 54, 61);
+        color: #000;
+        font-family: "Anek Latin", sans-serif;
+        transition: all 0.3s linear;
+      }
+      @media (max-width: 310px) {
+        #arrowDown {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="relative" id="body">
+    <!--  navigation-->
+    <section
+      class="w-full flex justify-between md:shadow-xl fixed z-50 md:h-2 p-2 md:p-8 md:bg-gray-900"
+    >
+      <h1
+        class="ml-0 font-light italic hidden md:block text-gray-300 text-2xl capitalize"
+      >
+        Muchene
+      </h1>
+      <div>
+        <!-- on desktop -->
+        <ul
+          class="font-bold md:text-xl space-x-5 text-gray-300 text-xl hidden md:block md:flex"
+        >
+          <li class="cursor-pointer mb-7 hover:border-b-4 border-green-800">
+            <a href="#home">Home</a>
+          </li>
+          <li class="cursor-pointer mb-7 hover:border-b-4 border-green-800">
+            <a href="#about">About</a>
+          </li>
+          <li class="cursor-pointer mb-7 hover:border-b-4 border-green-800">
+            <a href="#projects">Projects </a>
+          </li>
+          <li class="cursor-pointer mb-7 hover:border-b-4 border-green-800">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+
+        <div class="md:hidden cursor-pointer" id="bars">
+          <div class="w-10 bg-white h-1 mb-3"></div>
+          <div class="w-10 bg-white h-1 mb-3"></div>
+          <div class="w-10 bg-white h-1 mb-3"></div>
+        </div>
+      </div>
+
+      <img
+        style="height: 4vh; margin-top: 3px"
+        class="hidden md:block cursor-pointer"
+        src="./images/moon.png"
+        alt=""
+        srcset=""
+        id="dark"
+      />
+
+      <!-- on mobile -->
+      <ul
+        id="mbNav"
+        class="hidden w-full h-full fixed z-50 top-0 left-0 right-0 bottom-0 bg-zinc-800 h-100 md:hidden space-x-5 text-gray-300 text-xl"
+      >
+        <p class="text-5xl p-3 cursor-pointer" id="collapsedNav">x</p>
+        <div
+          class="md:hidden p-3 text-4xl flex flex-col justify-center items-center"
+        >
+          <li class="cursor-pointer mb-7 hover:border-b-4 border-green-800">
+            <a id="hLink" href="#home">Home</a>
+          </li>
+          <li class="cursor-pointer mb-7 hover:border-b-4 border-green-800">
+            <a id="hLink" href="#about">About</a>
+          </li>
+          <li class="cursor-pointer mb-7 hover:border-b-4 border-green-800">
+            <a id="hLink" href="#projects">Projects </a>
+          </li>
+          <li class="cursor-pointer hover:border-b-4 border-green-800">
+            <a id="hLink" href="#contact">Contact</a>
+          </li>
+          <li class="mt-3" id="Mbdark">
+            <img
+              style="height: 4vh; margin-top: 3px"
+              class="cursor-pointer"
+              src="./images/moon.png"
+              alt=""
+              srcset=""
+            />
+          </li>
+        </div>
+      </ul>
+    </section>
+
+    <!-- hero -->
+
+    <section class="relative flex flex-row w-100 md:mb-4" id="home">
+      <section
+        class="h-60 md:h-80 mb-4 md:mt-3 text-white text-3xl md:text-5xl flex-col flex p-14"
+      >
+        <h1 class="text-green-500">Hi,</h1>
+        <h1 class="pb-4">
+          I'm <span class="text-5xl font-semiboldd text-gray-700">j</span>oseph,
+        </h1>
+        <h1 id="text"></h1>
+      </section>
+
+      <!-- my image -->
+      <div class="hidden md:block mt-14 mr-4">
+        <img
+          class="h-40 rounded-full md:mt-4"
+          src="./images/joseime.jpg"
+          alt=""
+          srcset=""
+        />
+      </div>
+      <!-- drop down -->
+      <a href="#top">
+        <div
+          id="arrowDown"
+          class="bg-green-800 p-2 rounded-full cursor-pointer absolute left-1/2 -ml-8 md:text-4xl bottom-0 flex"
+        >
+          <i class="text-white text-center fa-solid fa-arrow-down-long"></i>
+        </div>
+      </a>
+    </section>
+
+    <!-- about -->
+    <section
+      class="container p-11 md:flex text-white items-center justify-center flex-row"
+      id="top"
+    >
+      <div
+        class="p-4 w-1/2 mx-3 rounded-xl border-4 border-t-green-900 border-r-indigo-800 border-b-green-900 border-l-indigo-800 -900"
+      >
+        <h1 class="uppercase text-center text-2xl md:text-3xl pb-4" id="about">
+          about
+        </h1>
+        <h3 class="uppercase text-center text-2xl pb-4">me</h3>
+      </div>
+      <div>
+        <p class="w-30 text-xl mb-3 mt-2">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam sunt
+          facilis ea aspernatur, modi atque nihil quam et neque voluptate cum
+          esse error accusantium ipsa? Quasi aperiam perspiciatis laboriosam
+          expedita.
+        </p>
+        <p class="w-30 text-xl mb-3">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam sunt
+          facilis ea aspernatur, modi atque nihil quam et neque voluptate cum
+          esse error accusantium ipsa? Quasi aperiam perspiciatis laboriosam
+          expedita.
+        </p>
+        <p class="w-30 text-xl mb-3">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam sunt
+          facilis ea aspernatur, modi atque nihil quam et neque voluptate cum
+          esse error accusantium ipsa? Quasi aperiam perspiciatis laboriosam
+          expedita.
+        </p>
+      </div>
+    </section>
+
+    <!-- section  -->
+
+    <section class="container">
+      <h1 class="uppercase text-4xl text-white text-center" id="projects">
+        Projects
+      </h1>
+
+      <div class="container flex-col md:flex-row-reverse md:flex">
+        <div class="p-4 flex justify-center items-center">
+          <img
+            src="./images/mock.jpg"
+            alt=""
+            class="shadow object-cover border rounded"
+          />
+        </div>
+
+        <div class="flex flex-col justify-center items-center">
+          <p class="text-white text-xl md:mt-3 mr-4 ml-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+            facere rem delectus voluptas cum laborum nulla architecto officiis
+            ut iure debitis atque! Architecto facere incidunt praesentium
+            officiis voluptate porro minima.
+          </p>
+          <h1 class="capitalize text-green-600 text-xl">Made with</h1>
+          <div
+            class="container mt-4 text-white flex space-x-4 justify-center md:text-5xl"
+          >
+            <i class="devicon-react-original"></i>
+            <!-- <i class="devicon-firebase-plain"></i> -->
+            <i class="devicon-nodejs-plain"></i>
+            <i class="devicon-redux-original"></i>
+            <i class="devicon-npm-original-wordmark"></i>
+            <!-- <i class="devicon-tailwindcss-plain"></i> -->
+            <!-- <i class="devicon-git-plain"></i> -->
+            <i class="devicon-css3-plain-wordmark"></i>
+            <i class="devicon-html5-plain"></i>
+            <i class="devicon-express-original-wordmark"></i>
+          </div>
+          <div class="flex mt-3 space-x-4">
+            <p class="text-2xl text-white">
+              <a
+                class="hover:border-b-4 border-green-800"
+                target="_blank"
+                href="https://morning-mountain-01916.herokuapp.com/"
+                >site</a
+              >
+            </p>
+            <p class="text-white mt-1 font-bold">|</p>
+            <p class="text-2xl text-white">
+              <a
+                class="hover:border-b-4 border-green-800"
+                target="_blank"
+                href="https://github.com/joseph-muchene/wiss"
+                >Github</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- my skills -->
+
+    <section class="container">
+      <h1
+        class="uppercase text-4xl text-white text-center mb-3 mt-4"
+        id="projects"
+      >
+        Skills
+      </h1>
+      <!-- skills -->
+      <div
+        class="grid grid-rows-4 grid-flow-col text-center gap-2 text-xl mt-4 text-white"
+      >
+        <div>
+          <i class="devicon-react-original md:text-5xl"></i>
+          <p>React</p>
+        </div>
+
+        <div>
+          <i class="devicon-nodejs-plain"></i>
+          <p>Nodejs</p>
+        </div>
+        <div>
+          <i class="devicon-firebase-plain md:text-5xl"></i>
+          <p>Firebase</p>
+        </div>
+        <div>
+          <i class="devicon-redux-original md:text-5xl"></i>
+          <p>Redux</p>
+        </div>
+        <div>
+          <i class="devicon-npm-original-wordmark md:text-5xl"></i>
+          <p>Npm</p>
+        </div>
+
+        <div>
+          <i class="devicon-tailwindcss-plain md:text-5xl"></i>
+          <p>Tailwindcss</p>
+        </div>
+        <div>
+          <i class="devicon-git-plain md:text-5xl"></i>
+          <p>Git</p>
+        </div>
+        <div>
+          <i class="devicon-css3-plain-wordmark md:text-5xl"></i>
+          <p>Css3</p>
+        </div>
+        <div>
+          <i class="devicon-html5-plain md:text-5xl"></i>
+          <p>Html5</p>
+        </div>
+        <div>
+          <i class="devicon-express-original-wordmark md:text-5xl"></i>
+          <p>Expressjs</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- contacts -->
+
+    <h1
+      class="uppercase mt-4 text-4xl text-white text-center mb-3"
+      id="projects"
+    >
+      Contact me
+    </h1>
+    <section class="container">
+      <div
+        class="flex p-4 flex-col-reverse justify-center items-center md:flex-row lg:space-x-2"
+      >
+        <form
+          action=""
+          class="flex justify-center flex-col items-center md:w-1/2 container"
+          id="contact"
+        >
+          <div>
+            <input
+              type="text"
+              class="block md:w-96 p-2 rounded-md"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div>
+            <input
+              type="email"
+              class="block md:w-96 p-2 rounded-md mt-3"
+              placeholder="Enter your Email"
+            />
+          </div>
+          <div>
+            <textarea
+              name=""
+              placeholder="message"
+              id=""
+              cols="30"
+              class="block md:w-96 p-2 rounded-md resize-none mt-3"
+              rows="10"
+            ></textarea>
+          </div>
+          <div>
+            <button
+              class="block md:w-96 p-2 rounded-md hover:bg-black hover:text-white mt-3 text-white bg-green-600"
+            >
+              Get In Touch
+            </button>
+          </div>
+        </form>
+
+        <div class="md:w-1/2 text-white text-xl">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Perspiciatis sed nisi minus dolorum commodi, rerum expedita rem
+            dignissimos, voluptatem itaque voluptate modi magni. Praesentium vel
+            hic, eos voluptate corporis temporibus.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- sroll top -->
+
+    <div
+      class="flex justify-center mb-14 md:absolute md:bottom-10 md:right-7 md:p-4"
+    >
+      <a href="#home">
+        <div
+          id="arrowDown"
+          class="md:block bg-green-800 p-4 rounded-full cursor-pointer absolute left-1/2 -ml-8 md:text-4xl flex"
+        >
+          <i class="text-white text-center fa-solid fa-arrow-up-long"></i>
+        </div>
+      </a>
+    </div>
+    <!-- footer -->
+    <div class="flex justify-center items-center mt-8">
+      <h1 class="text-white text-2xl font-bold">
+        Designed By Joseph Muchene 2022
+      </h1>
+    </div>
+    <!-- scripts -->
+    <script src="./js/main.js"></script>
+    <script src="./js/autoTyping.js"></script>
+  </body>
+</html>
