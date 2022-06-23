@@ -39,7 +39,7 @@
       body {
         background-color: rgb(34, 54, 61);
         color: #000;
-        font-family: "Anek Latin", sans-serif;
+        font-family: "Anek Latin", Arial, Helvetica, sans-serif;
         transition: all 0.3s linear;
       }
       @media (max-width: 310px) {
@@ -55,9 +55,9 @@
       class="w-full flex justify-between md:shadow-xl fixed z-50 md:h-2 p-2 md:p-8 md:bg-gray-900"
     >
       <h1
-        class="ml-0 font-light italic hidden md:block text-gray-300 text-2xl capitalize"
+        class="cursor-pointer ml-0 font-light italic hidden md:block text-gray-300 text-2xl capitalize"
       >
-        Muchene
+        <a href="/">Muchene</a>
       </h1>
       <div>
         <!-- on desktop -->
@@ -176,22 +176,17 @@
       </div>
       <div>
         <p class="w-30 text-xl mb-3 mt-2">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam sunt
-          facilis ea aspernatur, modi atque nihil quam et neque voluptate cum
-          esse error accusantium ipsa? Quasi aperiam perspiciatis laboriosam
-          expedita.
+          Hello, I am a Joseph Muchene a sofware developer based at
+          Nairobi,Kenya. I design, build and deploy software with ease. I enjoy
+          learning new technologies and implementation of modern tools used in
+          software development.
         </p>
         <p class="w-30 text-xl mb-3">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam sunt
-          facilis ea aspernatur, modi atque nihil quam et neque voluptate cum
-          esse error accusantium ipsa? Quasi aperiam perspiciatis laboriosam
-          expedita.
-        </p>
-        <p class="w-30 text-xl mb-3">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam sunt
-          facilis ea aspernatur, modi atque nihil quam et neque voluptate cum
-          esse error accusantium ipsa? Quasi aperiam perspiciatis laboriosam
-          expedita.
+          Hello world, I remember it was the result of my first line of code. It
+          was an entry to a new path in my career journey. It opened the gates
+          to the world of adventure and exploration, grasping every concept that
+          became a skill which later would be used to create real world
+          applications.
         </p>
       </div>
     </section>
@@ -214,11 +209,12 @@
 
         <div class="flex flex-col justify-center items-center">
           <p class="text-white text-xl md:mt-3 mr-4 ml-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-            facere rem delectus voluptas cum laborum nulla architecto officiis
-            ut iure debitis atque! Architecto facere incidunt praesentium
-            officiis voluptate porro minima.
+            The "wiss" application as I call it, is an achievement to me. It was
+            one of my first application I build when I started. Wiss is a blog
+            that holds lots of fearture. Talking of multiple user
+            authentication, liking and comment fearture.
           </p>
+
           <h1 class="capitalize text-green-600 text-xl">Made with</h1>
           <div
             class="container mt-4 text-white flex space-x-4 justify-center md:text-5xl"
@@ -328,7 +324,9 @@
         class="flex p-4 flex-col-reverse justify-center items-center md:flex-row lg:space-x-2"
       >
         <form
-          action=""
+          name="contact"
+          method="POST"
+          data-netlify="true"
           class="flex justify-center flex-col items-center md:w-1/2 container"
           id="contact"
         >
@@ -337,18 +335,20 @@
               type="text"
               class="block md:w-96 p-2 rounded-md"
               placeholder="Enter your name"
+              name="name"
             />
           </div>
           <div>
             <input
               type="email"
+              name="email"
               class="block md:w-96 p-2 rounded-md mt-3"
               placeholder="Enter your Email"
             />
           </div>
           <div>
             <textarea
-              name=""
+              name="message"
               placeholder="message"
               id=""
               cols="30"
@@ -358,7 +358,8 @@
           </div>
           <div>
             <button
-              class="block md:w-96 p-2 rounded-md hover:bg-black hover:text-white mt-3 text-white bg-green-600"
+              type="submit"
+              class="block md:w-96 p-2 rounded-md transition hover:bg-black hover:text-white mt-3 text-white bg-green-600"
             >
               Get In Touch
             </button>
@@ -367,10 +368,8 @@
 
         <div class="md:w-1/2 text-white text-xl">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Perspiciatis sed nisi minus dolorum commodi, rerum expedita rem
-            dignissimos, voluptatem itaque voluptate modi magni. Praesentium vel
-            hic, eos voluptate corporis temporibus.
+            Do you have an idea? Let's discuss it and see what we can do
+            together.
           </p>
         </div>
       </div>
