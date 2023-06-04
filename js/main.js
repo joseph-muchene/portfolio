@@ -18,18 +18,15 @@ hLinks.forEach((link) => {
 
 // toggle body color
 document.getElementById("dark").addEventListener("click", () => {
-  document.getElementById("body").classList.toggle("bg-zinc-900");
-
-
-  console.log("clicked");
+  document.getElementById("body").classList.toggle("bg-[#000]");
+  body.classList.toggle("text-white");
 });
 
 // toggle body color on mobile
 document.getElementById("Mbdark").addEventListener("click", () => {
-  body.classList.toggle("bg-zinc-900");
+  body.classList.toggle("bg-[#000]");
+  body.classList.toggle("text-white");
+
   document.getElementById("mbNav").classList.toggle("hidden");
   console.log("clicked");
 });
-
-
-

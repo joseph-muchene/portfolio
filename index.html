@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@200&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400&display=swap"
       rel="stylesheet"
     />
     <!-- dev icons -->
@@ -37,8 +37,8 @@
       }
 
       body {
-        background-color: rgb(34, 54, 61);
-        color: #000;
+        /* background-color: #f4f4f4;
+        color: #000; */
         font-family: "Anek Latin", Arial, Helvetica, sans-serif;
         transition: all 0.3s linear;
       }
@@ -55,17 +55,18 @@
   <body class="relative" id="body">
     <!--  navigation-->
     <section
-      class="w-full flex justify-between md:shadow-xl fixed z-50 md:h-2 p-2 md:p-8 md:bg-gray-900"
+      class="w-screen flex justify-between md:shadow-xl 
+ z-50 md:h-2 p-2 md:p-8 h-auto"
     >
       <h1
-        class="cursor-pointer ml-0 font-light hidden md:block text-gray-300 text-2xl capitalize"
+        class="cursor-pointer ml-0 font-light hidden md:block md:text-#[000] text-2xl capitalize"
       >
         <a href="/">Muchene</a>
       </h1>
       <div>
         <!-- on desktop -->
         <ul
-          class="font-bold md:text-xl space-x-5 text-gray-300 text-xl hidden md:block md:flex"
+          class="font-bold md:text-xl space-x-5 text-xl hidden md:flex justify-between items-center"
         >
           <li class="cursor-pointer mb-7 hover:border-b-4 border-green-800">
             <a href="#home">Home</a>
@@ -81,22 +82,25 @@
           </li>
         </ul>
 
-        <div class="md:hidden cursor-pointer" id="bars">
-          <div class="w-10 bg-white h-1 mb-3"></div>
-          <div class="w-10 bg-white h-1 mb-3"></div>
-          <div class="w-10 bg-white h-1 mb-3"></div>
+        <div class="md:hidden cursor-pointer mt-5" id="bars">
+          <div class="w-10 bg-red-700 h-1 mb-3"></div>
+          <div class="w-10 bg-red-700 h-1 mb-3"></div>
+          <div class="w-10 bg-red-700 h-1 mb-3"></div>
         </div>
+
+      
       </div>
-
-      <img
-        style="height: 4vh; margin-top: 3px"
-        class="hidden md:block cursor-pointer"
-        src="./images/moon.png"
-        alt=""
-        srcset=""
-        id="dark"
-      />
-
+        <div>
+          <img
+            style="height: 4vh; margin-top: 3px"
+            class="hidden md:block cursor-pointer"
+            src="./images/moon.png"
+            alt=""
+            srcset=""
+            id="dark"
+          />
+        </div>
+    </ul>
       <!-- on mobile -->
       <ul
         id="mbNav"
@@ -133,56 +137,41 @@
 
     <!-- hero -->
 
-    <section class="relative flex flex-row w-100 md:mb-4" id="home">
+    <section class=" flex flex-col w-screen items-center" id="home">
       <section
-        style="margin-top: 40px"
-        class="h-60 md:h-80 mb-4 md:mt-3 text-white text-3xl md:text-5xl flex-col flex p-14"
+    
+        class=" mb-4 md:mt-3 text-3xl md:text-5xl flex-col flex p-14 mx-auto md:w-[900px]"
       >
-        <h1 class="text-green-500">Hi,</h1>
-        <h1 class="pb-4">
-          I'm
-          <span class="text-5xl font-bold text-gray-700 capitalize">J</span
-          >oseph Muchene,
-        </h1>
-        <h1 id="text"></h1>
-      </section>
-
+      <h1 class="text-center">Hi, I am Joseph</h1>
+   
+      <div class="h-10 mt-2">
+           <h1 id="text"></h1>
+      </div>
+        
+     
       <!-- my image -->
-      <div class="hidden md:block mt-14 mr-4">
+       <div class="mt-4 md:flex justify-center">
         <img
-          class="h-40 rounded-full md:mt-4"
+          class="h-40 rounded-full "
           src="./images/joseime.jpg"
           alt=""
           srcset=""
         />
       </div>
-      <!-- drop down -->
-      <!-- <a href="#top">
-        <div
-          id="arrowDown"
-          class="bg-green-800 p-2 rounded-full cursor-pointer absolute left-1/2 -ml-8 md:text-4xl bottom-0 flex"
-        >
-          <i class="text-white text-center fa-solid fa-arrow-down-long"></i>
-        </div>
-      </a> -->
+      </section>
+
+    
     </section>
 
     <!-- about -->
     <section
-      class="container p-11 md:flex text-white items-center justify-center flex-row"
+      class="  items-center justify-center mx-auto md:w-[900px]"
       id="top"
     >
-      <div
-        id="about__info"
-        class="p-4 w-1/2 mx-3 rounded-xl border-4 border-t-green-900 border-r-indigo-800 border-b-green-900 border-l-indigo-800 -900"
-      >
-        <h1 class="uppercase text-center text-2xl md:text-3xl pb-4" id="about">
-          about
-        </h1>
-        <h3 class="uppercase text-center text-2xl pb-4">me</h3>
-      </div>
+<h1 class=" text-center text-3xl
+">About me</h1>
       <div>
-        <p class="w-30 text-xl mb-3 mt-2">
+        <p class="w-30 text-xl mb-3 mt-2  p-11">
           I am a Javascript developer proficient in using Node.js and React to
           build web applications. With several years of experience in the field,
           I have a strong understanding of Javascript and its various frameworks
@@ -200,22 +189,20 @@
 
     <!-- section  -->
 
-    <h1 class="uppercase text-4xl text-white text-center" id="projects">
-      Projects
-    </h1>
-    <section class="container flex flex-col-reverse">
+    <h1 class="uppercase text-4xl text-center" id="projects">Projects</h1>
+    <section class="container flex flex-col md:mx-auto md:w-[800px]">
       <!-- project 1 -->
-      <div class="container md:flex-row-reverse md:flex">
+      <div class="container md:flex-col md:flex">
         <div class="p-4 flex justify-center items-center">
           <img
             src="./images/pay-on-delivery.png"
             alt=""
-            class="shadow w-60 object-cover border rounded"
+            class="shadow object-cover border rounded"
           />
         </div>
 
         <div class="flex flex-col justify-center items-center">
-          <p class="text-white text-xl md:mt-3 mr-4 ml-4">
+          <p class="text-xl md:mt-3 mr-4 ml-4">
             A business-to-business trading application built with React and
             Firebase. The platform facilitates the delivery of products between
             businesses, streamlining the trade process and making it easier for
@@ -229,9 +216,7 @@
           </p>
 
           <h1 class="capitalize text-green-600 text-xl">Made with</h1>
-          <div
-            class="container mt-4 text-white flex space-x-4 justify-center md:text-5xl"
-          >
+          <div class="container mt-4 flex space-x-4 justify-center md:text-5xl">
             <i class="devicon-react-original"></i>
             <i class="devicon-firebase-plain"></i>
 
@@ -239,7 +224,7 @@
             <!-- <i class="devicon-git-plain"></i> -->
           </div>
           <div class="flex mt-3 space-x-4">
-            <p class="text-2xl text-white">
+            <p class="text-2xl">
               <a
                 class="hover:border-b-4 border-green-800"
                 target="_blank"
@@ -247,8 +232,8 @@
                 >site</a
               >
             </p>
-            <p class="text-white mt-1 font-bold">|</p>
-            <p class="text-2xl text-white">
+            <p class="mt-1 font-bold">|</p>
+            <p class="text-2xl">
               <a
                 class="hover:border-b-4 border-green-800"
                 target="_blank"
@@ -260,8 +245,8 @@
         </div>
       </div>
       <!-- end project -->
-      <!-- project 2 -->
-      <div class="container md:flex-row-reverse md:flex">
+
+      <div class="container md:flex-col md:flex">
         <div class="p-4 flex justify-center items-center">
           <img
             src="./images/Screenshot (13).png"
@@ -271,7 +256,7 @@
         </div>
 
         <div class="flex flex-col justify-center items-center">
-          <p class="text-white text-xl md:mt-3 mr-4 ml-4">
+          <p class="text-xl md:mt-3 mr-4 ml-4">
             A full-stack social media application built with the MERN (MongoDB,
             Express, React, and Node.js) stack. The application allows users to
             register and log in, creating their own profile and granting access
@@ -284,9 +269,7 @@
           </p>
 
           <h1 class="capitalize text-green-600 text-xl">Made with</h1>
-          <div
-            class="container mt-4 text-white flex space-x-4 justify-center md:text-5xl"
-          >
+          <div class="container mt-4 flex space-x-4 justify-center md:text-5xl">
             <i class="devicon-react-original"></i>
             <!-- <i class="devicon-firebase-plain"></i> -->
             <i class="devicon-nodejs-plain"></i>
@@ -302,7 +285,7 @@
             <i class="devicon-express-original-wordmark"></i>
           </div>
           <div class="flex mt-3 space-x-4">
-            <p class="text-2xl text-white">
+            <p class="text-2xl te">
               <a
                 class="hover:border-b-4 border-green-800"
                 target="_blank"
@@ -310,8 +293,8 @@
                 >site</a
               >
             </p>
-            <p class="text-white mt-1 font-bold">|</p>
-            <p class="text-2xl text-white">
+            <p class="te mt-1 font-bold">|</p>
+            <p class="text-2xl te">
               <a
                 class="hover:border-b-4 border-green-800"
                 target="_blank"
@@ -324,7 +307,7 @@
       </div>
       <!-- end project -->
       <!-- project 3 -->
-      <div class="container md:flex-row-reverse md:flex">
+      <div class="container md:flex-col md:flex">
         <div class="p-4 flex justify-center items-center">
           <img
             src="./images/Screenshot (18).png"
@@ -334,7 +317,7 @@
         </div>
 
         <div class="flex flex-col justify-center items-center">
-          <p class="text-white text-xl md:mt-3 mr-4 ml-4">
+          <p class="te text-xl md:mt-3 mr-4 ml-4">
             A real-time chat application built with Vanilla JavaScript, HTML and
             Firebase as a backend. The application allows users to register and
             log in to participate in a chatroom, where they can exchange
@@ -346,7 +329,7 @@
 
           <h1 class="capitalize text-green-600 text-xl">Made with</h1>
           <div
-            class="container mt-4 text-white flex space-x-4 justify-center md:text-5xl"
+            class="container mt-4 te flex space-x-4 justify-center md:text-5xl"
           >
             <i class="devicon-react-original"></i>
             <i class="devicon-firebase-plain"></i>
@@ -357,7 +340,7 @@
             <i class="devicon-html5-plain"></i>
           </div>
           <div class="flex mt-3 space-x-4">
-            <p class="text-2xl text-white">
+            <p class="text-2xl te">
               <a
                 class="hover:border-b-4 border-green-800"
                 target="_blank"
@@ -365,8 +348,8 @@
                 >site</a
               >
             </p>
-            <p class="text-white mt-1 font-bold">|</p>
-            <p class="text-2xl text-white">
+            <p class="te mt-1 font-bold">|</p>
+            <p class="text-2xl te">
               <a
                 class="hover:border-b-4 border-green-800"
                 target="_blank"
@@ -380,7 +363,7 @@
       <!-- end project -->
 
       <!-- project 4 -->
-      <div class="container md:flex-row-reverse md:flex">
+      <div class="container md:flex-col md:flex">
         <div class="p-4 flex justify-center items-center">
           <img
             src="./images/shoe.jpg"
@@ -390,7 +373,7 @@
         </div>
 
         <div class="flex flex-col justify-center items-center">
-          <p class="text-white text-xl md:mt-3 mr-4 ml-4">
+          <p class="te text-xl md:mt-3 mr-4 ml-4">
             A full-stack e-commerce application built with the MERN (MongoDB,
             Express, React, and Node.js) stack. The platform allows users to
             purchase products and track their delivery progress through a
@@ -405,7 +388,7 @@
 
           <h1 class="capitalize text-green-600 text-xl">Made with</h1>
           <div
-            class="container mt-4 text-white flex space-x-4 justify-center md:text-5xl"
+            class="container mt-4 te flex space-x-4 justify-center md:text-5xl"
           >
             <i class="devicon-react-original"></i>
             <i class="devicon-firebase-plain"></i>
@@ -418,7 +401,7 @@
             <i class="devicon-express-original-wordmark"></i>
           </div>
           <div class="flex mt-3 space-x-4">
-            <p class="text-2xl text-white">
+            <p class="text-2xl te">
               <a
                 class="hover:border-b-4 border-green-800"
                 target="_blank"
@@ -426,8 +409,8 @@
                 >site</a
               >
             </p>
-            <p class="text-white mt-1 font-bold">|</p>
-            <p class="text-2xl text-white">
+            <p class="te mt-1 font-bold">|</p>
+            <p class="text-2xl te">
               <a
                 class="hover:border-b-4 border-green-800"
                 target="_blank"
@@ -441,7 +424,7 @@
       <!-- end project -->
 
       <!-- project 5 -->
-      <div class="container md:flex-row-reverse md:flex">
+      <div class="container md:flex-col md:flex">
         <div class="p-4 flex justify-center items-center">
           <img
             src="./images/webguru.png"
@@ -451,7 +434,7 @@
         </div>
 
         <div class="flex flex-col justify-center items-center">
-          <p class="text-white text-xl md:mt-3 mr-4 ml-4">
+          <p class="te text-xl md:mt-3 mr-4 ml-4">
             Successfully designed a captivating website for a web design and
             digital marketing agency using React, Tailwind CSS, and Firebase.
             The website showcases the agency's expertise with a visually
@@ -462,7 +445,7 @@
 
           <h1 class="capitalize text-green-600 text-xl">Made with</h1>
           <div
-            class="container mt-4 text-white flex space-x-4 justify-center md:text-5xl"
+            class="container mt-4 te flex space-x-4 justify-center md:text-5xl"
           >
             <i class="devicon-react-original"></i>
             <i class="devicon-firebase-plain"></i>
@@ -475,7 +458,7 @@
             <i class="devicon-html5-plain"></i>
           </div>
           <div class="flex mt-3 space-x-4">
-            <p class="text-2xl text-white">
+            <p class="text-2xl te">
               <a
                 class="hover:border-b-4 border-green-800"
                 target="_blank"
@@ -483,8 +466,8 @@
                 >site</a
               >
             </p>
-            <p class="text-white mt-1 font-bold">|</p>
-            <p class="text-2xl text-white">
+            <p class="te mt-1 font-bold">|</p>
+            <p class="text-2xl te">
               <a
                 class="hover:border-b-4 border-green-800"
                 target="_blank"
@@ -495,21 +478,18 @@
           </div>
         </div>
       </div>
-      <!-- end project -->
+      <!-- end project-->
     </section>
 
     <!-- my skills -->
 
     <section class="container">
-      <h1
-        class="uppercase text-4xl text-white text-center mb-3 mt-4"
-        id="projects"
-      >
+      <h1 class="uppercase text-4xl te text-center mb-3 mt-4" id="projects">
         Skills
       </h1>
       <!-- skills -->
       <div
-        class="grid grid-rows-4 grid-flow-col text-center gap-2 text-xl mt-4 text-white"
+        class="grid grid-rows-4 grid-flow-col text-center gap-2 text-xl mt-4 te"
       >
         <div>
           <i class="devicon-react-original md:text-5xl"></i>
@@ -562,15 +542,12 @@
 
     <!-- contacts -->
 
-    <h1
-      class="uppercase mt-4 text-4xl text-white text-center mb-3"
-      id="projects"
-    >
+    <h1 class="uppercase text-4xl mt-4 text-center mb-3" id="projects">
       Contact me
     </h1>
     <section class="container">
       <div
-        class="flex p-4 flex-col-reverse justify-center items-center md:flex-row lg:space-x-2"
+        class="flex p-4 flex-col-reverse justify-center items-center   lg:space-x-2"
       >
         <form
           name="contact"
@@ -608,15 +585,15 @@
           <div>
             <button
               type="submit"
-              class="block md:w-96 p-2 rounded-md transition hover:bg-black hover:text-white mt-3 text-white bg-green-600"
+              class="block md:w-96 p-2 rounded-md transition hover:bg-[#121212]  hover:text-white mt-3 te bg-green-600"
             >
               Get In Touch
             </button>
           </div>
         </form>
 
-        <div class="md:w-1/2 text-white text-xl">
-          <p>
+        <div class="md:w-1/2 te text-xl  my-3">
+          <p class="text-center">
             Do you have an idea? Let's discuss it and see what we can do
             together.
           </p>
@@ -634,13 +611,13 @@
           id="arrowDown"
           class="md:block bg-green-800 p-4 rounded-full cursor-pointer absolute left-1/2 -ml-8 md:text-4xl flex"
         >
-          <i class="text-white text-center fa-solid fa-arrow-up-long"></i>
+          <i class="te text-center fa-solid fa-arrow-up-long"></i>
         </div>
       </a>
     </div>
     <!-- footer -->
     <div class="flex justify-center items-center mt-8">
-      <!-- <h1 class="text-white text-2xl font-bold">
+      <!-- <h1 class="te text-2xl font-bold">
         Designed By Joseph Muchene 2022
       </h1> -->
 
@@ -648,7 +625,7 @@
         <li>
           <a
             target="_blank"
-            class="text-white text-4xl rounded"
+            class="te text-4xl rounded"
             href="https://github.com/joseph-muchene"
             ><i class="devicon-github-original"></i
           ></a>
@@ -656,7 +633,7 @@
         <li>
           <a
             target="_blank"
-            class="text-white text-4xl rounded"
+            class="te text-4xl rounded"
             href="https://www.facebook.com/profile.php?id=100078749086012"
             ><i class="devicon-facebook-plain"></i
           ></a>
@@ -664,7 +641,7 @@
         <li>
           <a
             target="_blank"
-            class="text-white text-4xl rounded"
+            class="te text-4xl rounded"
             href="https://twitter.com/ngugi_muchene"
             ><i class="devicon-twitter-plain"></i
           ></a>
@@ -672,7 +649,7 @@
         <li>
           <a
             target="_blank"
-            class="text-white text-4xl rounded"
+            class="te text-4xl rounded"
             href="https://www.linkedin.com/in/joseph-muchene-3a1ab0216/"
             ><i class="devicon-linkedin-plain"></i
           ></a>
